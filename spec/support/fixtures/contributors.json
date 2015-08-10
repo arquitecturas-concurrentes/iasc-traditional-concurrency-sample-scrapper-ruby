@@ -1,0 +1,40 @@
+{
+  "title": "Infragram",
+  "variant": "Point & Shoot",
+  "version": "v0.0.1",
+  "description": "A multispectral camera",
+  "documentation": "http://publiclab.org/wiki/infragram",
+  "license": "CERN OHL 1.1",
+  "license_link": "http://publiclab.org/licenses",
+  "contributors": [
+    {
+      "name": "Jeffrey Warren",
+      "email": "jeff@unterbahn.com"
+    },
+    {
+      "name": "Don Blair",
+      "email": "don.blair@organizers.publiclab.org"
+    }
+  ],
+  "source_files": [
+    {
+      "link": "http://publiclab.org/system/images/foo.jpg",
+      "description": "circuit diagram"
+    }
+  ],
+  "bill_of_materials": [
+    {
+      "link": "http://amazon.com/product/mallow",
+      "description": "The marshmallows"
+    },
+    {"title": "duct tape"}
+  ],
+  "builds_upon": [
+    {
+      "title": "irkit",
+      "link": "https://github.com/jywarren/irkit",
+      "license": "CERN OHL 1.1",
+      "license_link": "http://publiclab.org/licenses"
+    }
+  ]
+}

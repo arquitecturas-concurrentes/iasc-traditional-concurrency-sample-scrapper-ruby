@@ -11,10 +11,11 @@ class PoolScrapper < BaseScrapper
   end
 
   def run_workers
-    self.pool.schedule do
-      run_worker(self.queue_link, self.headers, self.data)
+    self.workers_count.times do
+      self.pool.schedule do
+        run_worker(self.queue_link, self.headers, self.data)
+      end
     end
-
     at_exit { self.pool.shutdown }
   end
 

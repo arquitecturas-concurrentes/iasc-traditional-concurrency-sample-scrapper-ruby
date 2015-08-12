@@ -27,4 +27,14 @@ class Table
       @hash[key] += delta
     end
   end
+
+  def get_or_accum(key, delta, initial)
+    @mutex.synchronize do
+      if self.get(key).nil?
+        self.put(key, initial)
+      else
+        self.accum(key, delta)
+      end
+    end
+  end
 end

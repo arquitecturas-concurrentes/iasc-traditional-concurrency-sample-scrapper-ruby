@@ -13,11 +13,7 @@ def run_worker(queue_link, headers, data)
     repo = Nokogiri::HTML(open(complete_link, headers))
     repo.xpath('//span[@class="lang"]').each do | method_span |
       language = method_span.content
-      if table.get(language).nil?
-        table.put language, 1
-      else
-        table.accum language, 1
-      end
+      table.get_or_accum(language, 1, 1)
     end
 
     directory_name = 'repoInfo'
